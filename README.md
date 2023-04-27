@@ -26,4 +26,4 @@ Pentru mai multe informații despre acest proiect, vă rugăm să contactați de
 
 # Alte informații
  
- în acesto repo se găsesțe și documentația proiectului.
+ în acest repo se găsesțe și documentația proiectului.
