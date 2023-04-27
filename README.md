@@ -22,3 +22,8 @@ Contribuțiile sunt binevenite la acest proiect. Dacă doriți să contribuiți 
  # Contact
 
 Pentru mai multe informații despre acest proiect, vă rugăm să contactați dezvoltatorii la adresa de email mihai.enache@student.unitbv.ro , radu.ciocoiu@student.unitbv.ro
+
+
+# Alte informații
+ 
+ în acesto repo se găsesțe și documentația proiectului.
