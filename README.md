@@ -6,7 +6,7 @@ Acest proiect oferă un scanner OCR (recunoaștere optică a caracterelor) pentr
 
 # Instalare
 
-Pentru a utiliza acest proiect, va trebui să aveți o placă de dezvoltare ESP32 și un modul de cameră compatibil. Va trebui, de asemenea, să instalați cadrul de dezvoltare ESP-IDF pe computerul dvs.
+Pentru a utiliza acest proiect, va trebui să aveți o placă de dezvoltare ESP32 și un modul de cameră compatibil. Va trebui, de asemenea, să instalați cadrul de dezvoltare pe computerul dvs.
 
 # Utilizare
 
