@@ -1,7 +1,8 @@
 # OCR-Scanner
+
 OCR Scanner pentru ESP32
 
-Acest proiect oferă un scanner OCR (recunoaștere optică a caracterelor) pentru microcontrolerul ESP32. Vă permite să capturați o imagine a unui text imprimat folosind o cameră și apoi să convertiți textul într-un format digital care poate fi procesat
+Acest proiect oferă un scanner OCR (recunoaștere optică a caracterelor) pentru microcontrolerul ESP32. Vă permite să capturați o imagine a unui text imprimat folosind o cameră și apoi să convertiți textul într-un format digital care poate fi procesat.
 
 
 # Instalare
