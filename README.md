@@ -11,6 +11,7 @@ Pentru a utiliza acest proiect, va trebui să aveți o placă de dezvoltare ESP3
 # Utilizare
 
 Pentru a utiliza scanner-ul OCR, trebuie să conectați o cameră la placa ESP32 și să o configurați prin intermediul meniului de setări. După configurarea camera, puteți rula scanner-ul OCR pentru a captura și converti textul imprimat.
+Este compatibil cu sistemul de operare WINDOWS , LINUX , MacOS
 
 # Contribuții
 
