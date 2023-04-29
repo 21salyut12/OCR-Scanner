@@ -1,6 +1,8 @@
 import cv2
 import pytesseract
 import numpy as np
+import argparse
+import imutils
 from PIL import Image
 from matplotlib import pyplot as plot
 
@@ -60,7 +62,6 @@ cv2.imwrite('processed_images/no_noise.jpg', no_noise)
 
 display_img('processed_images/no_noise.jpg')
 
-
 #Erosion
 def thin_font(image):
      image = cv2.bitwise_not(image)
@@ -106,9 +107,26 @@ color = [255, 255, 255]
 top, bottom, left, right = [150]*4
 
 image_with_borders = cv2.copyMakeBorder(no_borders, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color)
-cv2.imwrite("processed_images/image_with_borders.jpg", image_with_borders)
+cv2.imwrite('processed_images/image_with_borders.jpg', image_with_borders)
 
-display_img("processed_images/image_with_borders.jpg")
+display_img('processed_images/image_with_borders.jpg')
+
+#Deskewing images
+def deskew_image(image):
+     ap = argparse.ArgumentParser()
+     ap.add_argument('-i', '--image', required=True, help=img_file)
+     args = vars(ap.parse_args())
+
+     for angle in np.arrange(0, 360, 15):
+          rotated = imutils.rotate(image, angle)
+          cv2.imshow('Rotated (Correct)', rotated)
+          cv2.waitKey(0)
+     return (image)
+
+rotated_image = deskew_image(image)
+cv2.imwrite('processed_images/rotated_image.jpg', rotated_image)
+
+display_img(image)
 
 try:
         img = Image.open(img_file)
