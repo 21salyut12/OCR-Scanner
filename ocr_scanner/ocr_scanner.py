@@ -59,7 +59,7 @@ cv2.imwrite('processed_images/no_noise.jpg', no_noise)
 display_img('processed_images/no_noise.jpg')
 
 
-#Dilation and Erosion
+#Erosion
 def thin_font(image):
      image = cv2.bitwise_not(image)
      kernel = np.ones((2,2), np.uint8)
@@ -72,6 +72,18 @@ cv2.imwrite('processed_images/eroded_image.jpg', eroded_image)
 
 display_img('processed_images/eroded_image.jpg')
 
+#Dilation
+def thick_font(image):
+     image = cv2.bitwise_not(image)
+     kernel = np.ones((2,2), np.uint8)
+     image = cv2.dilate(image, kernel, iterations=1)
+     image = cv2.bitwise_not(image)
+     return (image)
+
+dilated_image = thick_font(no_noise)
+cv2.imwrite('processed_images/dilated_image.jpg', dilated_image)
+
+display_img('processed_images/dilated_image.jpg')
 try:
         img = Image.open(img_file)
         ocr = pytesseract.image_to_string(img)
