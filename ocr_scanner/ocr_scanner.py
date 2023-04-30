@@ -3,7 +3,6 @@ import pytesseract
 import numpy as np
 import argparse
 import imutils
-from PIL import Image
 from matplotlib import pyplot as plot
 
 #Open Saved Photo
@@ -31,6 +30,7 @@ display_img(img_file)
 inverted_img = cv2.bitwise_not(image)
 cv2.imwrite('processed_images/inverted_camera-test.jpg', inverted_img)
 display_img('processed_images/inverted_camera-test.jpg')
+
 
 #Binarization
 def grayscale(img):
@@ -111,27 +111,24 @@ cv2.imwrite('processed_images/image_with_borders.jpg', image_with_borders)
 
 display_img('processed_images/image_with_borders.jpg')
 
+#Rescale Image
+def resize(img):
+     img = cv2.imread('processed_images/image_with_borders.jpg')
+     cv2.resize(img, (600, 400))
+     return (img)
+
+rescaled_img = resize(image_with_borders)
+cv2.imwrite('processed_images/resized_img.jpg', rescaled_img)
+
+display_img('processed_images/resized_img.jpg')
+
 #Deskewing images
-def deskew_image(image):
-     ap = argparse.ArgumentParser()
-     ap.add_argument('-i', '--image', required=True, help=img_file)
-     args = vars(ap.parse_args())
 
-     for angle in np.arrange(0, 360, 15):
-          rotated = imutils.rotate(image, angle)
-          cv2.imshow('Rotated (Correct)', rotated)
-          cv2.waitKey(0)
-     return (image)
-
-rotated_image = deskew_image(image)
-cv2.imwrite('processed_images/rotated_image.jpg', rotated_image)
-
-display_img(image)
 
 try:
-        img = Image.open(img_file)
+        img = cv2.imread('processed_images/no_noise.jpg')
         ocr = pytesseract.image_to_string(img)
-        print('Scanned result for {}: \n{}'.format(img_file, ocr))
+        print('Scanned result for {}: \n{}'.format('processed_images/no_noise.jpg', ocr))
 #    img.save("processed_images/proc_camera-test.jpg")
 except IOError:
     pass
