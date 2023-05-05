@@ -1,4 +1,0 @@
-if (text lizibil pt scanare):
-	do ocr scanner
-else:
-	print ('Try Again! :)')
