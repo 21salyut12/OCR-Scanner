@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plot
 
 #Open Saved Photo
-img_file = 'images/capture-test.jpg'
+img_file = 'C:/Users/Radu/Downloads/capture-test.jpg'
 image = cv2.imread(img_file)
 
 
@@ -124,7 +124,7 @@ cv2.imwrite('processed_images/rotated_image.jpg', rotated_image)
 """
 
 #Display the processed images
-display_img('images/capture-test.jpg')
+display_img('C:/Users/Radu/Downloads/capture-test.jpg')
 display_img('processed_images/inverted_camera-test.jpg')
 display_img('processed_images/gray.jpg')
 display_img('processed_images/black_white_image.jpg')

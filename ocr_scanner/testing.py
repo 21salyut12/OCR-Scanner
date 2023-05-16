@@ -5,7 +5,7 @@ import os.path
 
 class TestImageProcessing(unittest.TestCase):
     def setUp(self):
-        self.img_file = 'images/capture-test.jpg'
+        self.img_file = 'C:/Users/Radu/Downloads/capture-test.jpg'
         self.processed_dir = 'processed_images'
         
     def test_invert_image(self):
