@@ -106,23 +106,6 @@ def resize(img):
 rescaled_img = resize(image_with_borders)
 cv2.imwrite('processed_images/resized_img.jpg', rescaled_img)
 
-
-#Rotate Image
-"""
-def deskew_image(image):
-     ap = argparse.ArgumentParser()
-     ap.add_argument('-i', '--image', required=True, help=img_file)
-     args = vars(ap.parse_args())
-
-     for angle in np.arrange(0, 360, 15):
-          rotated = imutils.rotate(image, angle)
-          cv2.imshow('Rotated (Correct)', rotated)
-     return (image)
-
-rotated_image = deskew_image(image)
-cv2.imwrite('processed_images/rotated_image.jpg', rotated_image)
-"""
-
 #Display the processed images
 display_img('C:/Users/Radu/Downloads/capture-test.jpg')
 display_img('processed_images/inverted_camera-test.jpg')
@@ -134,4 +117,3 @@ display_img('processed_images/eroded_image.jpg')
 display_img('processed_images/dilated_image.jpg')
 display_img('processed_images/removed_borders.jpg')
 display_img('processed_images/image_with_borders.jpg')
-#display_img('processed_images/rotated_image.jpg')

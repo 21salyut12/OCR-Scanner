@@ -18,4 +18,4 @@ im_file = "C:/Users/Radu/Downloads/capture-test.jpg"
 
 im = Image.open(im_file)
 ocr_pil = pytesseract.image_to_string(im)
-print('Scanned result for {} using the PIL library: \n{}'.format(img_file,ocr_pil))
+print("Scanned result for {} using the PIL library: \n{}".format(img_file,ocr_pil))
